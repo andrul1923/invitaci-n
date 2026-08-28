@@ -326,6 +326,7 @@ formulario.addEventListener("submit", async (event) => {
             recepcion: recepcion
         }
     ]);
+    .select();
 
     // ======================================
     // ERROR AL GUARDAR
