@@ -354,11 +354,6 @@ formulario.addEventListener("submit", async (event) => {
     // CONFIRMACIÓN CORRECTA
     // ======================================
 
-    console.log(
-        "Confirmación guardada:",
-        data
-    );
-
 
     alert(
         "¡Gracias por confirmar tu asistencia! ❤️"
