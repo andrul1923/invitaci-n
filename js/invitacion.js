@@ -315,23 +315,17 @@ formulario.addEventListener("submit", async (event) => {
     // GUARDAR EN SUPABASE
     // ======================================
 
-    const {
-        data,
-        error
-    } = await supabaseClient
+   const { error } = await supabaseClient
 
-        .from("confirmaciones")
+    .from("confirmaciones")
 
-        .insert([
-            {
-                nombre: nombre,
-                ceremonia: ceremonia,
-                recepcion: recepcion
-            }
-        ])
-
-        .select();
-
+    .insert([
+        {
+            nombre: nombre,
+            ceremonia: ceremonia,
+            recepcion: recepcion
+        }
+    ]);
 
     // ======================================
     // ERROR AL GUARDAR
