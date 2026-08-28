@@ -315,18 +315,20 @@ formulario.addEventListener("submit", async (event) => {
     // GUARDAR EN SUPABASE
     // ======================================
 
-   const { error } = await supabaseClient
+   if (error) {
 
-    .from("confirmaciones")
+    console.error(
+        "Error al guardar:",
+        error
+    );
 
-    .insert([
-        {
-            nombre: nombre,
-            ceremonia: ceremonia,
-            recepcion: recepcion
-        }
-    ]);
- 
+    alert(
+        "Ha ocurrido un error al guardar tu confirmación. " +
+        "Por favor, inténtalo nuevamente."
+    );
+
+    return;
+}
 
     // ======================================
     // ERROR AL GUARDAR
