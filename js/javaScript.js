@@ -314,35 +314,6 @@ updateCountdown();
 
 setInterval(updateCountdown, 1000);
 
-// ==========================================
-// lista de regalo
-// ==========================================
-
-const abrirLista = document.getElementById("abrirLista");
-const cerrarLista = document.getElementById("cerrarLista");
-const modalRegalos = document.getElementById("modalRegalos");
-
-
-/* Abrir */
-abrirLista.addEventListener("click", function () {
-    modalRegalos.classList.add("mostrar");
-});
-
-
-/* Cerrar con la X */
-cerrarLista.addEventListener("click", function () {
-    modalRegalos.classList.remove("mostrar");
-});
-
-
-/* Cerrar haciendo clic fuera de la ventana */
-modalRegalos.addEventListener("click", function (evento) {
-
-    if (evento.target === modalRegalos) {
-        modalRegalos.classList.remove("mostrar");
-    }
-
-});
 const abrirEncuesta = document.getElementById("abrirEncuesta");
 const cerrarEncuesta = document.getElementById("cerrarEncuesta");
 const modalEncuesta = document.getElementById("modalEncuesta");
